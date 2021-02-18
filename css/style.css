@@ -1,0 +1,328 @@
+
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');  /*bold*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');  /*medium*/
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); /*regular*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* LOADER*/
+
+.loading{
+    margin: 0 auto;
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    animation: fadeout 1s ;
+    animation-fill-mode: forwards;
+    -webkit-animation: fadeout 1s;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation: fadeout 1s;
+    -o-animation-fill-mode: forwards;
+    -moz-animation: fadeout 1s;
+    -moz-animation-fill-mode: forwards;
+    
+}
+.main{
+    margin: 15rem auto;
+    display: flex;
+    justify-content: center;
+}
+.dot{
+    border: 5px solid #000;
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+}
+.dot2{
+border: 5px solid #ff0;
+border-radius: 50px;
+background-color: transparent;
+width: 80px;
+height: 80px;
+margin: -5px -5px;
+border-left-color: transparent;
+border-top-color: transparent;
+animation:loader 1s linear;
+animation-iteration-count:infinite ;
+-webkit-animation:loader 1s linear;
+-webkit-animation-iteration-count:infinite ;
+-o-animation:loader 1s linear;
+-o-animation-iteration-count:infinite ;
+-moz-animation:loader 1s linear;
+-moz-animation-iteration-count:infinite ;
+}
+
+@keyframes loader{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes fadeout{
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+/* SCROLL-BAR */
+
+::-webkit-scrollbar{
+    width: 3px!important;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #ff0;
+    border-radius: 50px!important;
+}
+::-webkit-scrollbar-track{
+background-color: #000;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+    background-color: transparent!important;
+    transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    -moz-transition: 00.3s linear;
+}
+#nav.fixed{
+    background:#060606f2!important;
+}
+.navbar-brand{
+    font-size: 1.7rem;
+    padding-left: 6rem;
+    color: yellow!important;
+}
+.navbar-nav{
+    margin: 0 30rem auto;
+}
+.navbar-nav > li{
+    font-size: 1.2rem;
+    margin: 15px;
+    font-weight: 500;
+}
+ .nav-link{
+    color: #fff!important;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+.nav-link:hover{
+    color: #ffff00!important;
+}
+
+/* HOMEPAGE SECTION */
+
+.home{
+    background: url(../images/header/3.jpg)no-repeat;
+    background-size: cover;
+    height: 42rem;
+}
+.col-md-6{
+    margin: 22% auto;
+    color:#fff;
+
+}
+ .titles> p{ 
+ font-size:1.5rem ;
+margin-bottom: 0;
+text-align: center;
+font-family: 'Lato', sans-serif;
+}
+.titles> h3{
+    font-size: 2.8rem;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.5px;
+}
+.button{
+   width: 100%; 
+   margin: 1.5rem 12rem auto;
+
+}
+.button > a{
+    background-color: yellow;
+    color: #000;
+    padding: 0.5rem 2.5rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* SERVICES SECTION */
+
+.services{
+    padding: 5rem 0 5rem;
+}
+.services>.container> h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+.card{
+    border: none;
+    border-radius: 0;
+}
+.card-header{
+    text-align: center;
+    border-bottom: none;
+    background-color: transparent;
+}
+.card-header> i{
+background-color: yellow;
+font-size: 3rem;
+padding: 1.5rem;
+border-radius: 50%;
+color: #000;
+}
+.card-body{
+    text-align: center;
+}
+
+/* PORTIFOLIO SECTION */
+.portifolio{
+    padding: 5rem 0 5rem;
+}
+.portifolio>.container> h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+.col-md-4>.card >.card-header> img{
+width: 100%;
+}
+.card{
+    border: none;
+    border-radius: 0;
+}
+.card> .card-header{
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+}
+.card-header> .overly{
+    width: 350px;
+    height: 205px;
+    background-color:#ffff00c2;
+    position: absolute;
+    opacity: 0;
+    transition: 00.3s ease;
+    -webkit-transition: 00.3s ease;
+    -moz-transition:0.3s ease ;
+    -o-transition: 00.3s ease;
+}
+.overly:hover{
+    opacity: 1;
+}
+.overly>h4{
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+.overly>p{
+    text-align: center;
+    margin: 0 2rem;
+    font-family: 'Lato', sans-serif;
+}
+
+/* ABOUT SECTION*/
+.about{
+    padding: 5rem 0 5rem;
+}
+.about>.container> h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+.about>.container>.row>.col-md-4{
+    margin: 3rem 5rem;
+}
+.about>.container>.row>.col-md-4:nth-child(1){
+    margin-top: 10rem;
+}
+.info> h4{
+font-size: 1.9rem;
+font-family: 'Open Sans', sans-serif;
+}
+.info> p{
+    letter-spacing: 0.5px;
+    margin: 3rem 0 3rem;
+
+}
+.info>ul{
+    margin-left: -2rem;
+    display: inline;
+    justify-content: center;
+}
+.info> ul>li{
+list-style-type: none;
+font-size: 20px;
+display:flex;
+justify-content: space-between;
+}
+li>.firstspan{
+    font-weight: bold;
+}
+li> .secondspan{
+    color:#808080;
+    font-family: 'Lato', sans-serif;
+}
+
+/* FOOTER SECTION */
+footer{
+    background-color: #000;
+    padding: 2rem;
+}
+.social-networks{
+    text-align: center;
+}
+.social-networks> a{
+    text-decoration: none;
+    margin: 3px;
+}
+ .social-networks>a > i{
+    width: 35px;
+    height: 35px;
+    background-color: #ff0;
+    color: #000;
+    border-radius: 50px;
+    line-height: 35px!important;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+.social-networks>a>i:hover{
+    background-color: #000;
+    color: #ff0;
+}
+.copyright> p{
+    color: #fff;
+    text-align: center;
+}
+.smallInfo{
+color: #fff;
+}
+
+/* RESPONSIVE */
+
+@media(min-width:315px) and (max-width:330px){
+html, body{
+   overflow-x: hidden; 
+   
+}
+}
+
+
